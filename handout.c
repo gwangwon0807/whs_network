@@ -74,7 +74,7 @@ int main(){
   char errbuf[PCAP_ERRBUF_SIZE];
   struct bpf_program fp;
   char filter_exp[] = "tcp";
-  bpf_u_int32 net;
+  bpf_u_int32 net = 0;
 
   // Step 1: Open live pcap session on NIC with name enp0s3
   handle = pcap_open_live("eth0", BUFSIZ, 1, 1000, errbuf);
